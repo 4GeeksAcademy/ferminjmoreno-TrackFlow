@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="title desc">
+  <title id="title">Especializacion vertical</title>
+  <desc id="desc">Categorias de productos representadas por bloques</desc>
+  <rect width="600" height="360" rx="24" fill="#ecfeff"/>
+  <rect x="120" y="90" width="110" height="180" rx="16" fill="#0ea5e9"/>
+  <rect x="245" y="70" width="110" height="200" rx="16" fill="#10b981"/>
+  <rect x="370" y="110" width="110" height="160" rx="16" fill="#2563eb"/>
+  <rect x="140" y="120" width="70" height="22" rx="8" fill="#e0f2fe"/>
+  <rect x="265" y="105" width="70" height="22" rx="8" fill="#dcfce7"/>
+  <rect x="390" y="140" width="70" height="22" rx="8" fill="#dbeafe"/>
+  <text x="175" y="240" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">MODA</text>
+  <text x="300" y="240" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">TECH</text>
+  <text x="425" y="240" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">COS</text>
+</svg>

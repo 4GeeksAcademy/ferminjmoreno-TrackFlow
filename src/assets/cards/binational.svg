@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="title desc">
+  <title id="title">Operacion binacional</title>
+  <desc id="desc">Mapa simplificado con conexiones entre dos regiones logisticas</desc>
+  <rect width="600" height="360" rx="24" fill="#eff6ff"/>
+  <circle cx="180" cy="180" r="70" fill="#2563eb" opacity="0.2"/>
+  <circle cx="420" cy="180" r="70" fill="#059669" opacity="0.2"/>
+  <path d="M240 180 C290 130, 310 230, 360 180" stroke="#0f172a" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M355 160 L385 180 L355 200" fill="#0f172a"/>
+  <text x="180" y="188" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#1d4ed8">US</text>
+  <text x="420" y="188" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#047857">ES</text>
+</svg>
