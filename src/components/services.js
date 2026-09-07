@@ -1,26 +1,4 @@
-const cards = [
-  {
-    title: 'Gestion de almacenes',
-    body: 'Almacenamiento, picking y packing con inventario en tiempo real desde hubs en Los Angeles y Zaragoza.',
-    tag: 'Moda, electronica y cosmetica',
-    image: '/src/assets/cards/warehouse.svg',
-    alt: 'Gestion de almacenes',
-  },
-  {
-    title: 'Entregas de ultima milla',
-    body: 'Integracion con carriers certificados y seguimiento unificado para reducir incidencias de transporte.',
-    tag: 'Carriers auditados',
-    image: '/src/assets/cards/last-mile.svg',
-    alt: 'Entregas de ultima milla',
-  },
-  {
-    title: 'Logistica inversa',
-    body: 'Devoluciones automatizadas, inspeccion, reacondicionamiento y reingreso a stock con API directa.',
-    tag: 'Operacion automatizada',
-    image: '/src/assets/cards/returns.svg',
-    alt: 'Logistica inversa',
-  },
-];
+import { servicesCards } from '../data/servicesData.js';
 
 export const Services = () => `
   <section id="services" class="py-20 lg:py-28 bg-white" aria-labelledby="services-heading">
@@ -30,7 +8,7 @@ export const Services = () => `
         <p class="text-base sm:text-lg text-neutral-text">Soluciones modulares para acelerar operaciones de e-commerce en dos continentes.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        ${cards
+        ${servicesCards
           .map(
             (card) => `
           <article class="bg-neutral-bg p-8 rounded-2xl border border-slate-200/80 card-shadow card-shadow-hover flex flex-col justify-between gap-4">

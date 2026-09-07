@@ -115,7 +115,10 @@ export const Contact = () => `
             </label>
             <p id="privacy-agreement-error" class="form-error hidden">Debes aceptar la politica de privacidad.</p>
 
-            <button type="submit" id="submit-btn" class="w-full inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold rounded-lg bg-secondary-emerald text-white hover:bg-emerald-700 transition-smooth shadow-md">Solicitar informacion personalizada</button>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <button type="submit" id="submit-btn" class="flex-1 inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold rounded-lg bg-secondary-emerald text-white hover:bg-emerald-700 transition-smooth shadow-md">Solicitar informacion personalizada</button>
+              <button type="button" id="reset-btn" class="inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold rounded-lg border-2 border-slate-300 text-slate-600 hover:bg-slate-100 hover:border-slate-400 transition-smooth">Limpiar formulario</button>
+            </div>
             <p id="form-status" class="text-sm font-medium text-slate-600" aria-live="polite"></p>
           </form>
         </div>

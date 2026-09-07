@@ -5,7 +5,7 @@ export const Header = () => `
 
   <header class="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-smooth">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2" aria-label="TrackFlow inicio">
+      <a href="/" class="flex items-center gap-2" aria-label="TrackFlow inicio">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" class="h-12 sm:h-14 w-auto transition-smooth" aria-hidden="true">
           <g stroke-linecap="round" stroke-linejoin="round">
             <path d="M5,24 C5,39 45,39 45,24 M37,16 L45,24 L37,32" stroke="#2563EB" stroke-width="4.5" fill="none" />

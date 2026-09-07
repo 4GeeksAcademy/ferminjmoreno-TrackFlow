@@ -13,9 +13,9 @@ export const Footer = () => `
         <span class="font-semibold text-white">Track<span class="text-slate-500">Flow</span></span>
       </div>
       <p>&copy; 2026 TrackFlow. Todos los derechos reservados.</p>
-      <nav class="flex items-center gap-4">
-        <a href="#" class="hover:text-white transition-colors">Privacidad</a>
-        <a href="#" class="hover:text-white transition-colors">Cookies</a>
+      <nav class="flex items-center gap-4" aria-label="Enlaces legales">
+        <a href="/privacidad" class="hover:text-white transition-colors">Privacidad</a>
+        <a href="/cookies" class="hover:text-white transition-colors">Cookies</a>
       </nav>
     </div>
   </footer>
