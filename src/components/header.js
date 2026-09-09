@@ -1,5 +1,5 @@
 export const Header = () => `
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:p-3 focus:bg-secondary-emerald focus:text-white focus:rounded-lg focus:font-semibold">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:p-3 focus:bg-emerald-600 focus:text-white focus:rounded-lg focus:font-semibold">
     Saltar al contenido principal
   </a>
 
@@ -23,10 +23,10 @@ export const Header = () => `
       </a>
 
       <nav class="hidden md:flex items-center gap-8" aria-label="Navegacion principal">
-        <a href="#services" class="text-sm font-medium text-slate-600 hover:text-primary-navy transition-colors">Servicios</a>
-        <a href="#coverage" class="text-sm font-medium text-slate-600 hover:text-primary-navy transition-colors">Cobertura</a>
-        <a href="#why-us" class="text-sm font-medium text-slate-600 hover:text-primary-navy transition-colors">Por que TrackFlow</a>
-        <a href="#contact" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg bg-secondary-emerald text-white hover:bg-emerald-700 transition-colors shadow-sm">Solicitar info</a>
+        <a href="#services" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Servicios</a>
+        <a href="#coverage" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Cobertura</a>
+        <a href="#why-us" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Por que TrackFlow</a>
+        <a href="#contact" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition-colors shadow-sm">Solicitar info</a>
       </nav>
 
       <button id="hamburger-btn" type="button" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu">
@@ -41,10 +41,10 @@ export const Header = () => `
 
     <nav id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white" aria-label="Navegacion movil">
       <div class="px-4 pt-2 pb-4 space-y-1">
-        <a href="#services" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-primary-navy transition-colors">Servicios</a>
-        <a href="#coverage" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-primary-navy transition-colors">Cobertura</a>
-        <a href="#why-us" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-primary-navy transition-colors">Por que TrackFlow</a>
-        <a href="#contact" class="block w-full text-center px-4 py-2.5 mt-2 rounded-lg bg-secondary-emerald text-white text-base font-semibold hover:bg-emerald-700 transition-colors shadow-sm">Solicitar info</a>
+        <a href="#services" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">Servicios</a>
+        <a href="#coverage" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">Cobertura</a>
+        <a href="#why-us" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">Por que TrackFlow</a>
+        <a href="#contact" class="block w-full text-center px-4 py-2.5 mt-2 rounded-lg bg-emerald-600 text-white text-base font-semibold hover:bg-emerald-700 transition-colors shadow-sm">Solicitar info</a>
       </div>
     </nav>
   </header>

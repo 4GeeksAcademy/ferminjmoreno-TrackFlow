@@ -1,11 +1,11 @@
 export const Contact = () => `
-  <section id="contact" class="py-20 lg:py-28 bg-neutral-bg border-t border-slate-200" aria-labelledby="contact-heading">
+  <section id="contact" class="py-20 lg:py-28 bg-slate-50 border-t border-slate-200" aria-labelledby="contact-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
         <div class="lg:col-span-5 space-y-5">
-          <h2 id="contact-heading" class="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-title">Comienza a optimizar tu logistica</h2>
-          <p class="text-sm sm:text-base text-neutral-text">Comparte tus datos y te contactamos en menos de 24 horas laborales.</p>
-          <ul class="space-y-2 text-sm font-medium text-neutral-title">
+          <h2 id="contact-heading" class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">Comienza a optimizar tu logistica</h2>
+          <p class="text-sm sm:text-base text-slate-600">Comparte tus datos y te contactamos en menos de 24 horas laborales.</p>
+          <ul class="space-y-2 text-sm font-medium text-slate-900">
             <li>Email: comercial@trackflow.com</li>
             <li>LA: +1 213 555 0147</li>
             <li>Zaragoza: +34 976 123 456</li>
@@ -118,7 +118,7 @@ export const Contact = () => `
             <p id="privacy-agreement-error" class="form-error hidden" role="alert">Debes aceptar la politica de privacidad.</p>
 
             <div class="flex flex-col sm:flex-row gap-3">
-              <button type="submit" id="submit-btn" class="flex-1 inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold rounded-lg bg-secondary-emerald text-white hover:bg-emerald-700 transition-smooth shadow-md">Solicitar informacion personalizada</button>
+              <button type="submit" id="submit-btn" class="flex-1 inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition-smooth shadow-md">Solicitar informacion personalizada</button>
               <button type="button" id="reset-btn" class="inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold rounded-lg border-2 border-slate-300 text-slate-600 hover:bg-slate-100 hover:border-slate-400 transition-smooth">Limpiar formulario</button>
             </div>
             <p id="form-status" class="text-sm font-medium text-slate-600" aria-live="polite"></p>

@@ -1,5 +1,5 @@
 export const Footer = () => `
-  <footer class="bg-primary-navy text-slate-400 py-10 px-4 sm:px-6 lg:px-8 border-t border-slate-800">
+  <footer style="background-color: #0f172a;" class="text-slate-400 py-10 px-4 sm:px-6 lg:px-8 border-t border-slate-800">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
       <div class="flex items-center gap-2" aria-hidden="true">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="h-9 w-9 transition-smooth" stroke-linecap="round" stroke-linejoin="round">

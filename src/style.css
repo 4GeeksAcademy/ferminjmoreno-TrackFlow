@@ -1,16 +1,3 @@
-@import "tailwindcss";
-
-@theme {
-  --color-primary-navy: #0f172a;
-  --color-secondary-emerald: #059669;
-  --color-accent-blue: #2563eb;
-  --color-neutral-bg: #f8fafc;
-  --color-neutral-title: #0f172a;
-  --color-neutral-text: #334155;
-  --color-warning-wcag: #b45309;
-  --color-error-wcag: #b91c1c;
-}
-
 :root {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --color-primary-navy: #0f172a;

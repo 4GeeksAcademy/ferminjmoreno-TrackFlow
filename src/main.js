@@ -1,4 +1,3 @@
-import './style.css';
 import { renderApp } from './app.js';
 import { setupMobileMenu } from './features/navigation.js';
 import { setupLeadForm } from './features/leadForm.js';
