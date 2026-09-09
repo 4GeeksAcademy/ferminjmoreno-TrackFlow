@@ -20,6 +20,29 @@ export const validatePhone = (phone, minLength = 7) => {
 };
 
 /**
+ * Valida una URL cuando el campo tiene contenido.
+ */
+export const validateUrl = (url) => {
+  if (!url) {
+    return true;
+  }
+
+  try {
+    new URL(url);
+    return true;
+  } catch {
+    return false;
+  }
+};
+
+/**
+ * Valida la longitud máxima de los comentarios.
+ */
+export const validateComments = (comments, maxLength = 500) => {
+  return comments.length <= maxLength;
+};
+
+/**
  * Valida que un select tenga valor seleccionado.
  */
 export const validateSelect = (value) => {
@@ -48,9 +71,11 @@ export const validateLeadForm = (form) => {
   const contactPerson = form.querySelector('#contact-person');
   const contactEmail = form.querySelector('#contact-email');
   const contactPhone = form.querySelector('#contact-phone');
+  const companyWebsite = form.querySelector('#company-website');
   const companyCountry = form.querySelector('#company-country');
   const productType = form.querySelector('#product-type');
   const monthlyVolume = form.querySelector('#monthly-volume');
+  const additionalComments = form.querySelector('#additional-comments');
   const privacyAgreement = form.querySelector('#privacy-agreement');
   const current3PL = form.querySelectorAll('input[name="current_3pl"]:checked');
   const selectedServices = form.querySelectorAll('input[name="services"]:checked');
@@ -60,11 +85,13 @@ export const validateLeadForm = (form) => {
     'contact-person-error': !validateText(contactPerson?.value),
     'contact-email-error': !validateEmail(contactEmail?.value),
     'contact-phone-error': !validatePhone(contactPhone?.value),
+    'company-website-error': !validateUrl(companyWebsite?.value.trim()),
     'company-country-error': !validateSelect(companyCountry?.value),
     'product-type-error': !validateSelect(productType?.value),
     'monthly-volume-error': !validateSelect(monthlyVolume?.value),
     'services-error': !validateCheckboxGroup(selectedServices),
     'current-3pl-error': !validateCheckboxGroup(current3PL),
+    'additional-comments-error': !validateComments(additionalComments?.value ?? ''),
     'privacy-agreement-error': !validateCheckbox(privacyAgreement?.checked),
   };
 
