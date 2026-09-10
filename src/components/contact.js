@@ -17,32 +17,32 @@ export const Contact = () => `
             <div>
               <label for="company-name" class="form-label">Nombre de la empresa *</label>
               <input id="company-name" name="company_name" type="text" class="form-input" required aria-invalid="false" aria-describedby="company-name-error" />
-              <p id="company-name-error" class="form-error hidden" role="alert">Ingresa un nombre valido.</p>
+              <p id="company-name-error" class="form-error hidden" role="alert">El nombre de la empresa debe tener al menos 2 caracteres</p>
             </div>
 
             <div>
               <label for="contact-person" class="form-label">Persona de contacto *</label>
               <input id="contact-person" name="contact_person" type="text" class="form-input" required aria-invalid="false" aria-describedby="contact-person-error" />
-              <p id="contact-person-error" class="form-error hidden" role="alert">Ingresa el nombre de contacto.</p>
+              <p id="contact-person-error" class="form-error hidden" role="alert">Ingresa nombre y apellido del contacto</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
                 <label for="contact-email" class="form-label">Email corporativo *</label>
                 <input id="contact-email" name="contact_email" type="email" class="form-input" required aria-invalid="false" aria-describedby="contact-email-error" />
-                <p id="contact-email-error" class="form-error hidden" role="alert">Ingresa un email corporativo valido.</p>
+                <p id="contact-email-error" class="form-error hidden" role="alert">Ingresa un email corporativo válido (ejemplo: nombre@empresa.com)</p>
               </div>
               <div>
                 <label for="contact-phone" class="form-label">Telefono de contacto *</label>
                 <input id="contact-phone" name="contact_phone" type="tel" class="form-input" required aria-invalid="false" aria-describedby="contact-phone-error" />
-                <p id="contact-phone-error" class="form-error hidden" role="alert">Ingresa un telefono valido.</p>
+                <p id="contact-phone-error" class="form-error hidden" role="alert">El teléfono debe incluir código de país (ejemplo: +1 213 555 0147)</p>
               </div>
             </div>
 
             <div>
               <label for="company-website" class="form-label">Sitio web de la empresa</label>
               <input id="company-website" name="company_website" type="url" class="form-input" aria-invalid="false" aria-describedby="company-website-error" />
-              <p id="company-website-error" class="form-error hidden" role="alert">Ingresa una URL valida.</p>
+              <p id="company-website-error" class="form-error hidden" role="alert">Si incluyes sitio web, debe ser una URL válida</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -54,7 +54,7 @@ export const Contact = () => `
                   <option value="ES">España</option>
                   <option value="BOTH">Ambos</option>
                 </select>
-                <p id="company-country-error" class="form-error hidden" role="alert">Selecciona un pais.</p>
+                <p id="company-country-error" class="form-error hidden" role="alert">Selecciona el país de operación principal</p>
               </div>
               <div>
                 <label for="product-type" class="form-label">Tipo de producto *</label>
@@ -65,7 +65,7 @@ export const Contact = () => `
                   <option value="cosmetica">Cosmetica</option>
                   <option value="otro">Otro</option>
                 </select>
-                <p id="product-type-error" class="form-error hidden" role="alert">Selecciona un tipo de producto.</p>
+                <p id="product-type-error" class="form-error hidden" role="alert">Selecciona el tipo de producto que manejas</p>
               </div>
             </div>
 
@@ -78,7 +78,7 @@ export const Contact = () => `
                 <option value="501-2000">501-2000 envios/mes</option>
                 <option value="2000+">2000+ envios/mes</option>
               </select>
-              <p id="monthly-volume-error" class="form-error hidden" role="alert">Selecciona un volumen.</p>
+              <p id="monthly-volume-error" class="form-error hidden" role="alert">Selecciona el volumen mensual estimado</p>
               <p id="volume-warning" class="hidden mt-2 text-xs font-semibold text-warning-wcag">Para menos de 100 envios mensuales, evalua si el servicio ajusta a tu etapa actual.</p>
             </div>
 
@@ -89,7 +89,7 @@ export const Contact = () => `
                 <label class="inline-flex items-center gap-2 text-sm"><input type="checkbox" name="services" value="ultima_milla">Ultima milla</label>
                 <label class="inline-flex items-center gap-2 text-sm"><input type="checkbox" name="services" value="logistica_inversa">Logistica inversa</label>
               </div>
-              <p id="services-error" class="form-error hidden" role="alert">Selecciona al menos un servicio.</p>
+              <p id="services-error" class="form-error hidden" role="alert">Selecciona al menos un servicio de interés</p>
             </fieldset>
 
             <fieldset aria-describedby="current-3pl-error">
@@ -99,7 +99,7 @@ export const Contact = () => `
                 <label class="inline-flex items-center gap-2"><input type="radio" name="current_3pl" value="no">No</label>
                 <label class="inline-flex items-center gap-2"><input type="radio" name="current_3pl" value="evaluando">Estoy evaluando</label>
               </div>
-              <p id="current-3pl-error" class="form-error hidden" role="alert">Selecciona una opcion.</p>
+              <p id="current-3pl-error" class="form-error hidden" role="alert">Indica si actualmente trabajas con otro proveedor logístico</p>
             </fieldset>
 
             <div>
@@ -108,20 +108,20 @@ export const Contact = () => `
                 <span id="char-counter" class="text-[11px] text-slate-400 font-mono">Quedan 500 caracteres</span>
               </div>
               <textarea id="additional-comments" name="additional_comments" maxlength="500" rows="4" class="form-input" aria-invalid="false" aria-describedby="additional-comments-error"></textarea>
-              <p id="additional-comments-error" class="form-error hidden" role="alert">Los comentarios no pueden superar los 500 caracteres.</p>
+              <p id="additional-comments-error" class="form-error hidden" role="alert">Los comentarios no pueden exceder 500 caracteres (quedan 0)</p>
             </div>
 
             <label class="inline-flex items-start gap-2 text-sm">
               <input id="privacy-agreement" name="privacy_agreement" type="checkbox" class="mt-1" required aria-invalid="false" aria-describedby="privacy-agreement-error">
               <span>Acepto la politica de privacidad *</span>
             </label>
-            <p id="privacy-agreement-error" class="form-error hidden" role="alert">Debes aceptar la politica de privacidad.</p>
+            <p id="privacy-agreement-error" class="form-error hidden" role="alert">Debes aceptar la política de privacidad para continuar</p>
 
             <div class="flex flex-col sm:flex-row gap-3">
               <button type="submit" id="submit-btn" class="flex-1 inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition-smooth shadow-md">Solicitar informacion personalizada</button>
               <button type="button" id="reset-btn" class="inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold rounded-lg border-2 border-slate-300 text-slate-600 hover:bg-slate-100 hover:border-slate-400 transition-smooth">Limpiar formulario</button>
             </div>
-            <p id="form-status" class="text-sm font-medium text-slate-600" aria-live="polite"></p>
+            <div id="form-status" class="text-sm font-medium text-slate-600" aria-live="polite"></div>
           </form>
         </div>
       </div>

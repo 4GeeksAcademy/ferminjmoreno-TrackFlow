@@ -43,6 +43,13 @@ export const setupLeadForm = () => {
   const warning = document.querySelector('#volume-warning');
   const status = document.querySelector('#form-status');
 
+  const updateCommentsError = () => {
+    const errorElement = document.querySelector('#additional-comments-error');
+    if (errorElement && comments) {
+      errorElement.textContent = `Los comentarios no pueden exceder 500 caracteres (quedan ${Math.max(0, 500 - comments.value.length)})`;
+    }
+  };
+
   const validateFields = (fields) => {
     const { errors } = validateLeadForm(form);
     const errorIds = new Set(fields.flatMap(getErrorIdsForField));
@@ -50,6 +57,7 @@ export const setupLeadForm = () => {
     errorIds.forEach((errorId) => {
       showError(errorId, errors[errorId]);
     });
+    updateCommentsError();
   };
 
   form.querySelectorAll('input, select, textarea').forEach((field) => {
@@ -77,6 +85,9 @@ export const setupLeadForm = () => {
     if (status) {
       status.textContent = '';
     }
+    form.querySelectorAll('[aria-invalid="true"]').forEach((field) => {
+      field.setAttribute('aria-invalid', 'false');
+    });
   };
 
   resetBtn?.addEventListener('click', resetForm);
@@ -92,6 +103,7 @@ export const setupLeadForm = () => {
     Object.entries(errors).forEach(([errorId, isError]) => {
       showError(errorId, isError);
     });
+    updateCommentsError();
 
     if (hasErrors) {
       if (status) {
@@ -101,7 +113,7 @@ export const setupLeadForm = () => {
     }
 
     if (status) {
-      status.textContent = 'Solicitud enviada. Te contactaremos pronto.';
+      status.innerHTML = '<strong>¡Gracias por tu interés en TrackFlow!</strong><br><br>Hemos recibido tu solicitud. Nuestro equipo comercial revisará tu información y te contactará en las próximas 24-48 horas para agendar una llamada y conocer tus necesidades logísticas en detalle.<br><br>Si tienes alguna consulta urgente, escríbenos directamente a <a href="mailto:comercial@trackflow.com">comercial@trackflow.com</a>';
     }
     form.reset();
     if (counter) {
