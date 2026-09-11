@@ -3,8 +3,65 @@ import type {
 	Discount,
 	InternalCheckpointStatus,
 	Money,
+	Package,
 	PublicShipmentStatus,
+	ShipmentManifest,
+	ShipmentReport,
+	PackageWeightReport,
 } from '../types/models.js';
+
+export const countBy = <Item, Category extends string | number | symbol>(
+	items: Item[],
+	getCategory: (item: Item) => Category,
+): Partial<Record<Category, number>> => {
+	return items.reduce<Partial<Record<Category, number>>>((counts, item) => {
+		const category = getCategory(item);
+		counts[category] = (counts[category] ?? 0) + 1;
+		return counts;
+	}, {});
+};
+
+export const sumBy = <Item>(items: Item[], getValue: (item: Item) => number): number => {
+	return items.reduce((total, item) => total + getValue(item), 0);
+};
+
+export const averageBy = <Item>(items: Item[], getValue: (item: Item) => number): number | undefined => {
+	return items.length === 0 ? undefined : sumBy(items, getValue) / items.length;
+};
+
+export const maxBy = <Item>(items: Item[], getValue: (item: Item) => number): Item | undefined => {
+	return items.reduce<Item | undefined>((maximum, item) => {
+		return !maximum || getValue(item) > getValue(maximum) ? item : maximum;
+	}, undefined);
+};
+
+export const minBy = <Item>(items: Item[], getValue: (item: Item) => number): Item | undefined => {
+	return items.reduce<Item | undefined>((minimum, item) => {
+		return !minimum || getValue(item) < getValue(minimum) ? item : minimum;
+	}, undefined);
+};
+
+export const createShipmentReport = (manifests: ShipmentManifest[]): ShipmentReport => {
+	return {
+		totalManifests: manifests.length,
+		manifestsByStatus: countBy(manifests, (manifest) => manifest.publicStatus),
+		deliveredManifests: manifests.filter((manifest) => manifest.publicStatus === 'delivered').length,
+		incidentManifests: manifests.filter((manifest) => manifest.publicStatus === 'incident').length,
+	};
+};
+
+export const createPackageWeightReport = (packages: Package[]): PackageWeightReport => {
+	const minimum = minBy(packages, (shipmentPackage) => shipmentPackage.billableWeightKg);
+	const maximum = maxBy(packages, (shipmentPackage) => shipmentPackage.billableWeightKg);
+	return {
+		totalPackages: packages.length,
+		totalActualWeightKg: sumBy(packages, (shipmentPackage) => shipmentPackage.weightKg),
+		totalBillableWeightKg: sumBy(packages, (shipmentPackage) => shipmentPackage.billableWeightKg),
+		averageBillableWeightKg: averageBy(packages, (shipmentPackage) => shipmentPackage.billableWeightKg) ?? 0,
+		minimumBillableWeightKg: minimum?.billableWeightKg,
+		maximumBillableWeightKg: maximum?.billableWeightKg,
+	};
+};
 
 export const calculateVolumetricWeight = (
 	lengthCm: number,

@@ -23,3 +23,7 @@ export const groupBy = <Item, Key>(items: Item[], getKey: (item: Item) => Key): 
 export const sortBy = <Item>(items: Item[], compare: (left: Item, right: Item) => number): Item[] => {
 	return [...items].sort(compare);
 };
+
+export const filterBy = <Item>(items: Item[], predicate: (item: Item) => boolean): Item[] => {
+	return items.filter(predicate);
+};

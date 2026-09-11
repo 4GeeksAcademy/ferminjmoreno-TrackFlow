@@ -161,3 +161,19 @@ export interface Incident {
 	occurredAt: IsoDateString;
 	isVisibleToCustomer: boolean;
 }
+
+export interface ShipmentReport {
+	totalManifests: number;
+	manifestsByStatus: Partial<Record<PublicShipmentStatus, number>>;
+	deliveredManifests: number;
+	incidentManifests: number;
+}
+
+export interface PackageWeightReport {
+	totalPackages: number;
+	totalActualWeightKg: number;
+	totalBillableWeightKg: number;
+	averageBillableWeightKg: number;
+	minimumBillableWeightKg?: number;
+	maximumBillableWeightKg?: number;
+}
